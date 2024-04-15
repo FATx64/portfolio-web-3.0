@@ -4,13 +4,11 @@ body{
     color: white;
 }
 
-article h1{
+body h1 p button{
     padding: 2rem;
+
 }
 
-article p{
-    padding: 2rem;
-}
 
 
 
