@@ -1,0 +1,16 @@
+body{
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+article h1{
+    padding: 2rem;
+}
+
+article p{
+    padding: 2rem;
+}
+
+
+
