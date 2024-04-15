@@ -4,13 +4,16 @@ body{
     color: white;
 }
 
-article h1{
+body h1 p button{
     padding: 2rem;
 }
 
-article p{
-    padding: 2rem;
+.my-picture img{
+    box-shadow: 14px 14px 0px -2px rgba(110,110,110,0.75);
+
+
 }
+
 
 
 
