@@ -37,3 +37,9 @@ body h1 p button{
     height: 1px;
     background-color: black;
 }
+
+#services-picture{
+    border-radius: 15px;
+    height: 500px;
+    
+}

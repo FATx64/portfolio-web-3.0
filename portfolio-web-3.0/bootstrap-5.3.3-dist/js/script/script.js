@@ -10,7 +10,7 @@ $(document).ready(function() {
     });
 
     $('#web-dev').click(function() {
-        changeImage('./asset/img/services/front-end.png');
+        changeImage('./asset/img/services/web-dev.png');
     });
 
     function changeImage(imagePath) {
