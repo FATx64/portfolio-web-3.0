@@ -1,25 +1,30 @@
+/* service picture transition when user click some certain title */
+
 $(document).ready(function() {
-    $('.fs-2').on('click', function() {
-        var text = $(this).text().trim();
-        var imagePath = getImagePath(text);
-        
-        if (imagePath) {
-            $('#services-picture').fadeOut(300, function() {
-                $(this).attr('src', imagePath).fadeIn(300);
-            });
-        }
+    $('#mobile-design').click(function() {
+        changeImage('./asset/img/services/mobile-design.png');
     });
 
-    function getImagePath(text) {
-        switch (text) {
-            case 'Mobile UI/UX Design':
-                return './asset/img/services/mobile-design.png';
-            case 'Web UI/UX Design':
-                return './asset/img/services/web-design.png';
-            case 'Front-end Web Developer':
-                return './asset/img/services/front-end.png';
-            default:
-                return null;
-        }
+    $('#web-design').click(function() {
+        changeImage('./asset/img/services/web-design.png');
+    });
+
+    $('#web-dev').click(function() {
+        changeImage('./asset/img/services/front-end.png');
+    });
+
+    function changeImage(imagePath) {
+        $('#services-picture').fadeOut(300, function() {
+            $(this).attr('src', imagePath).fadeIn(300);
+        });
     }
+});
+
+/*list hovering style */
+
+$(document).ready(function() {
+    $('.list-item').click(function() {
+        $('.list-item').removeClass('active'); // Remove active class from all list items
+        $(this).addClass('active'); // Add active class to the clicked list item
+    });
 });
