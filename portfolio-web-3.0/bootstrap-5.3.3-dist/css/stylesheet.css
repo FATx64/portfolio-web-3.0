@@ -43,3 +43,43 @@ body h1 p button{
     height: 500px;
     
 }
+
+/*portfolio cards*/
+
+.card {
+    position: relative;
+}
+
+.card-img-top {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top img {
+    transition: transform .3s ease;
+}
+
+.card:hover .card-img-top img {
+    transform: scale(1.1);
+}
+
+.card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+    color: #fff;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img-overlay {
+    opacity: 1;
+}
