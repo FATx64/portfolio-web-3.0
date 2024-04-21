@@ -1,8 +1,9 @@
 body{
     position: relative;
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 0, 0) !important;
+    color: white !important;
 }
+
 
 body h1 p button{
     padding: 2rem;
@@ -42,4 +43,42 @@ body h1 p button{
     border-radius: 15px;
     height: 500px;
     
+}
+
+/*portfolio cards*/
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: filter 0.3s;
+}
+
+.card:hover img {
+    filter: brightness(0.7);
+}
+
+.card::after {
+    content: attr(data-title);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Important to prevent the title from blocking clicks */
+}
+
+.card:hover::after {
+    opacity: 1;
 }
