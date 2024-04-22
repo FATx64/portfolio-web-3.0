@@ -1,2 +1,2 @@
-let dribbbleToken = 'TOKEN_GOES_HERE';
+let dribbbleToken = '28ed036a1bba3209ca88694d24e2ccdf87ded94d308d188d67bab569a4cc7d3c';
 export default dribbbleToken;
