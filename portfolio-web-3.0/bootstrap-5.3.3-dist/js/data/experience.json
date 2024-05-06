@@ -1,0 +1,25 @@
+{
+    "experiences": [
+        {
+            "company": "PT Pertamina Hulu Energi",
+            "position": "IT Support Intern",
+            "responsibilities":[
+                "Assist in scheduling company maintenance activities.",
+                "Monitoring and maintaining company computer hardware.",
+                "Helping to configure company server computers.",
+                "Manage and maintain basic company data."
+            ]
+        },
+        {
+            "company": "PT Pertamina Hulu Energi",
+            "position": "IT Support Intern",
+            "responsibilities":[
+                "Assist in scheduling company maintenance activities.",
+                "Monitoring and maintaining company computer hardware.",
+                "Helping to configure company server computers.",
+                "Manage and maintain basic company data."
+            ]
+        }
+        
+    ]
+}
