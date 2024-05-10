@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     // Function to populate carousel with Dribbble shots
     function populateCarousel(data) {
-        let carouselInner = $('.carousel-inner');
+        let carouselInner = $('#portfolioCarousel .carousel-inner');
     
         // Clear existing carousel items
         carouselInner.empty();
