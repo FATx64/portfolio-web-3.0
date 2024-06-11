@@ -100,43 +100,58 @@ body h1 p button{
 }
 
 /*contact*/
-body{
-    background: #edf1f5;
-    margin-top:20px;
-}
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid transparent;
-    border-radius: 0;
-}
-ul.list-style-none {
-    margin: 0;
-    padding: 0;
-}
-ul.list-style-none li {
+
+.social-media-list {
     list-style: none;
+    padding: 0;
+    margin: 0; 
+    margin-bottom: 2rem;
+    display: flex;
 }
-
-.font-light {
-    font-weight: 300;
+.social-media-list li {
+    margin: 0 15px; /* Add horizontal space */
 }
-.font-20 {
-    font-size: 10px !important;
-}
-
-
-ul.list-style-none li a {
-    color: #313131;
-    padding: 8px 0;
-    display: block;
+.social-media-list a {
     text-decoration: none;
+    color: inherit;
 }
-.text-muted {
-    color: #8898aa!important;
+.circle {
+    width: 75px;
+    height: 75px; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #070065; /* Change background color as needed */
+}
+.circle i {
+    font-size: 50px; /* Change this to your desired size */
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 576px) {
+    .circle {
+        width: 55px;
+        height: 55px;
+    }
+    .circle i {
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .circle {
+        width: 70px;
+        height: 75px;
+    }
+    .circle i {
+        font-size: 22px;
+    }
+}
+@media (min-width: 769px) {
+    .circle {
+        width: 75px;
+        height: 75px;
+    }
 }
