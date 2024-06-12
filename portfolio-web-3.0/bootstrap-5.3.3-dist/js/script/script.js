@@ -53,7 +53,7 @@ $(document).ready(function() {
 
     // Function to populate carousel with Dribbble shots
     function populateCarousel(data) {
-        let carouselInner = $('.carousel-inner');
+        let carouselInner = $('#portfolioCarousel .carousel-inner');
     
         // Clear existing carousel items
         carouselInner.empty();
@@ -80,6 +80,29 @@ $(document).ready(function() {
             `;
     
             carouselInner.append(item);
+        }
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+    
+        carousel.addEventListener('touchstart', handleTouchStart, false);
+        carousel.addEventListener('touchmove', handleTouchMove, false);
+        carousel.addEventListener('touchend', handleTouchEnd, false);
+    
+        function handleTouchStart(event) {
+            touchStartX = event.changedTouches[0].screenX;
+        }
+    
+        function handleTouchMove(event) {
+            touchEndX = event.changedTouches[0].screenX;
+        }
+    
+        function handleTouchEnd() {
+            if (touchEndX < touchStartX) {
+                carousel.querySelector('.carousel-control-next').click();
+            } else if (touchEndX > touchStartX) {
+                carousel.querySelector('.carousel-control-prev').click();
+            }
         }
     }   
 });
