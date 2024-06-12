@@ -155,3 +155,10 @@ body h1 p button{
         height: 75px;
     }
 }
+
+/*footer*/
+
+footer h4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

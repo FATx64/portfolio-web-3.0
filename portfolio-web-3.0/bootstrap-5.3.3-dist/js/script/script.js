@@ -81,6 +81,29 @@ $(document).ready(function() {
     
             carouselInner.append(item);
         }
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+    
+        carousel.addEventListener('touchstart', handleTouchStart, false);
+        carousel.addEventListener('touchmove', handleTouchMove, false);
+        carousel.addEventListener('touchend', handleTouchEnd, false);
+    
+        function handleTouchStart(event) {
+            touchStartX = event.changedTouches[0].screenX;
+        }
+    
+        function handleTouchMove(event) {
+            touchEndX = event.changedTouches[0].screenX;
+        }
+    
+        function handleTouchEnd() {
+            if (touchEndX < touchStartX) {
+                carousel.querySelector('.carousel-control-next').click();
+            } else if (touchEndX > touchStartX) {
+                carousel.querySelector('.carousel-control-prev').click();
+            }
+        }
     }   
 });
 
